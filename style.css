@@ -1,0 +1,1012 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "NotoSans-Regular";
+  src: url(Fontlar/NotoSans-Regular.eot);
+  src: url(Fontlar/NotoSans-Regular.eot?#iefix) format("embedded-opentype"),
+    url(Fontlar/NotoSans-Regular.svg#NotoSans-Regular) format("svg"),
+    url(Fontlar/NotoSans-Regular.woff) format("woff"),
+    url(Fontlar/NotoSans-Regular.woff2) format("woff2");
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "NotoSans-Regular", sans-serif;
+  color: #23689b;
+}
+body {
+  background-color: #e5ffff;
+}
+h2 {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2.2rem;
+    word-break: keep-all;
+  }
+  h3 {
+    font-size: 1.6rem;
+    word-break: keep-all;
+  }
+}
+/* ---------------------HEADER BÖLÜMÜ --------------- */
+header {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: space-around;
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  background-color: #23689b;
+  border-bottom: 2px solid lightgray;
+  font-family: "NotoSans-Regular", sans-serif;
+  color: white;
+  z-index: 55;
+}
+#headerlogo {
+  height: 90px;
+  min-height: 90px;
+  max-height: 90px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #headerlogo {
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
+    margin-top: 16px;
+  }
+}
+#headermenu {
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+}
+#headermenu a {
+  color: white;
+  text-decoration: none;
+  padding-inline: 20px;
+}
+#headermenu a:hover {
+  color: rgb(255, 255, 0);
+}
+#headersagtaraf {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#headersagtaraf * {
+  color: white;
+}
+#headersagtaraf a {
+  color: white;
+  text-decoration: none;
+}
+#headersagtaraf a:hover {
+  color: yellow;
+}
+.fa-phone-alt {
+  margin-right: 5px;
+  font-size: 15px;
+  color: white;
+}
+.fa-bars {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  header * {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  header * {
+    font-size: 0.8rem;
+  }
+  #headermenu a {
+    padding-inline: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    justify-content: space-between;
+    padding-inline: 5vw;
+  }
+  #headermenu {
+    display: none;
+  }
+  #headersagtaraf {
+    justify-content: space-around;
+    font-size: 0.7rem;
+    padding: 10px 5px;
+  }
+  .fa-phone-alt {
+    font-size: 10px;
+  }
+  .fa-bars {
+    display: initial;
+    font-size: 20px;
+    z-index: 23;
+  }
+}
+/* --------------------Header Bölümü Sonu --------------------*/
+/****************** sile resim bölümü 2.deneme ***********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .slider {
+    height: calc(50vh - 100px);
+  }
+}
+.slides {
+  position: absolute;
+  width: 400%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 2s ease;
+}
+
+.slide {
+  width: 25%;
+  height: 100%;
+  position: relative;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide:nth-child(1) {
+  background-image: url(Resimler/Main1.jpeg);
+}
+
+.slide:nth-child(2) {
+  background-image: url(Resimler/suluada.jpeg);
+}
+
+.slide:nth-child(3) {
+  background-image: url(Resimler/Main-4.jpeg);
+}
+.slide:nth-child(4) {
+  background-image: url(Resimler/Main3.jpeg);
+}
+.slide-data {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 0 20%;
+}
+
+.slide-data h1 {
+  font-family: "Anton", serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 45px;
+}
+
+.slide-data p {
+  font-family: "Cabin", serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.slide-data button {
+  font-family: "Roboto", serif;
+  background: none;
+  outline: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bolder;
+  padding: 10px 25px;
+  font-size: 20px;
+  transition: 0.4s linear;
+}
+.fa-angle-left,
+.fa-angle-right {
+  color: white;
+}
+.slide-data button:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.slider .arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 60px;
+  color: #fff;
+  transition: 0.4s linear;
+}
+
+.slider .arrows:hover {
+  text-shadow: 0px 0px 10px black, 0px 0px 10px black;
+}
+
+.slider .prev {
+  left: 3%;
+}
+
+.slider .next {
+  right: 3%;
+}
+@media (max-width: 768px) {
+  .slider .arrows {
+    font-size: 30px;
+  }
+}
+
+/* --------------------Slide Resim Bölümü --------------------*/
+/* -------------------- Turlarımız ---------------*/
+#turlarcont {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding-block: 5vh;
+  margin: 0 auto;
+  margin-top: 0;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+#turlarsol {
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: auto;
+  min-height: 400px;
+  padding: 0px 15px 20px 15px;
+  width: 35%;
+  min-width: 320px;
+}
+#turlarsag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+#turlarsag img {
+  width: 96%;
+  max-width: 550px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px lightgray;
+}
+#turlarsol > h3 {
+  text-align: center;
+  align-self: center;
+  font-size: 1.8rem;
+  color: #23689b;
+}
+#turlarsol > div {
+  align-self: flex-start;
+  justify-self: center;
+}
+#turlarsol p {
+  font-size: 1.2rem;
+}
+#turlarsol > a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: #bdbdbd;
+  padding: 10px 30px 12px 25px;
+  border-radius: 10px;
+  background-color: lightcyan;
+}
+#turlarsol > a:hover {
+  border: 1px solid #333;
+}
+#turlarsol .fa-angle-right {
+  color: #23689b;
+}
+@media (max-width: 768px) {
+  #turlarcont {
+    min-height: 110vh;
+  }
+  #turlarsol {
+    min-height: auto;
+  }
+  #turlarsol * {
+    margin-bottom: 10px;
+  }
+  #turlarsol > a {
+    padding: 10px 40px 0px 20px;
+  }
+}
+
+/* --------- Teknemizin Baslik ------------- */
+#teknemizinozellikleribaslik {
+  box-sizing: border-box;
+  background: rgb(224, 255, 255);
+  text-align: center;
+  padding: 40px 30px 40px 30px;
+}
+#teknemizinozellikleribaslik > h2 {
+  margin-block: 3vh;
+  color: #23689b;
+}
+@media (max-width: 768px) {
+  #teknemizinozellikleribaslik {
+    background: rgb(224, 255, 255);
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+  }
+}
+/* --------- Teknemizin Baslik ------------- */
+
+/* --------- Teknemizin Özellikleri ------------- */
+.ikiliMenuContainer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5vh 100px;
+  margin: 0 auto;
+  margin-top: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  background: rgb(250, 255, 255);
+  background: linear-gradient(
+    318deg,
+    rgba(250, 255, 255, 1) 0%,
+    rgba(224, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .ikiliMenuContainer {
+    padding: 4vh 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ikiliMenuContainer {
+    padding: 3vh 20px;
+  }
+  #salon {
+    box-sizing: border-box;
+    flex-direction: column-reverse;
+  }
+}
+.ikiliMenuContainersoltaraf {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: auto;
+  min-height: 400px;
+  padding: 0px 15px 20px 15px;
+  width: 40%;
+  min-width: 320px;
+}
+@media screen and (max-width: 893px) {
+  .ikiliMenuContainersoltaraf {
+    width: 96%;
+    box-sizing: border-box;
+  }
+}
+.ikiliMenuContainersoltaraf > h3 {
+  text-align: center;
+  align-self: center;
+  font-size: 1.8rem;
+  color: #23689b;
+}
+.ikiliMenuContainersoltaraf > div {
+  align-self: flex-start;
+  justify-self: center;
+}
+.ikiliMenuContainersoltaraf p {
+  font-size: 1.2rem;
+  color: #23689b;
+}
+.ikiliMenuContainersoltaraf .fas {
+  box-sizing: border-box;
+  width: 70px;
+  min-width: 70px;
+  max-width: 70px;
+  position: relative;
+  top: 10px;
+  font-size: 50px;
+  margin-right: 20px;
+  text-align: center;
+}
+.soltarafyazi {
+  justify-content: center;
+  align-items: center;
+}
+.soltarafyazi * {
+  margin: 10px auto;
+}
+
+.ikiliMenuContainersagtaraf {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.ikiliMenuContainersagtaraf picture {
+  width: 96%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+.ikiliMenuContainersagtaraf img {
+  width: 96%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 10px 5px 5px lightgray;
+}
+@media screen and (max-width: 893px) {
+  .ikiliMenuContainersoltaraf p {
+    font-size: 1rem;
+  }
+  .ikiliMenuContainersoltaraf .fas {
+    box-sizing: border-box;
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    position: relative;
+    top: 10px;
+    font-size: 40px;
+    margin-right: 20px;
+  }
+}
+#slider2 {
+  display: inline-block;
+  max-width: 40%;
+  overflow: hidden;
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  #slider2 {
+    max-width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #slider2 {
+    max-width: 98%;
+  }
+}
+#slider2 figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+#slider2 figure img {
+  border-radius: 10px;
+  width: 20%;
+  float: left;
+}
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+/* -------------------- Teknemizin Ozellikleri---------------*/
+
+/* ------------------ Hakkımda -------------- */
+#hakkimda {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: rgb(250, 255, 255);
+  background: linear-gradient(
+    318deg,
+    rgba(250, 255, 255, 1) 0%,
+    rgba(224, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  font-size: 1.5rem;
+  color: #23689b;
+  padding: 60px 4vh;
+  border-bottom: 2px solid white;
+}
+@media (max-width: 768px) {
+  #hakkimda {
+    font-size: 1.2rem;
+    padding: 40px 20px;
+  }
+}
+
+#hakkimda > h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #23689b;
+  letter-spacing: 0.2rem;
+}
+@media (max-width: 576px) {
+  #hakkimda {
+    padding: 5px 20px 30px 20px;
+  }
+  #hakkimda > h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #23689b;
+    letter-spacing: 0.2rem;
+  }
+}
+#hak-img-1 {
+  float: left;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+@media (max-width: 991px) {
+  #hak-img-1 {
+    display: none;
+    float: none;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  #hak-img-1 {
+    display: none;
+  }
+}
+#hak-img-2 {
+  display: none;
+  float: left;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-right: 40px;
+  margin-bottom: 30px;
+}
+@media (max-width: 991px) {
+  #hak-img-2 {
+    display: block;
+    float: none;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #hak-img-2 {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+#hosgeldiniz {
+  margin-top: 30px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#hakkimda > p {
+  line-height: 1.312;
+  color: #23689b;
+}
+#hakkimda span {
+  color: #23689b;
+  font-weight: bold;
+}
+#hakkimda > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hakkimda em,
+strong {
+  color: #23689b;
+}
+#hakkimda p a {
+  font-weight: bold;
+  color: #23689b;
+}
+#hakkimda p a:hover {
+  color: #052d4b;
+}
+.kaptaniara {
+  text-decoration: none;
+  color: white;
+  background-color: #00aa6c;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.kaptaniara img {
+  height: 1.2rem;
+  position: relative;
+  top: 3px;
+}
+.kaptaniara:hover {
+  background-color: white;
+  color: green;
+}
+/* -------------------- Arkaplanlı ikinci bölüm --------------------*/
+#resimliarkaplan2 {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-image: url(Resimler/Main2.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 5px;
+  text-align: center;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 4px solid white;
+}
+#resimliarkaplan2 p:first-child {
+  color: white;
+  font-size: 10vw;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+#resimliarkaplan2 a {
+  background-color: #00aa6c;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+#resimliarkaplan2 a:hover {
+  background-color: white;
+  color: #00aa6c;
+}
+@media (min-width: 768px) {
+  #resimliarkaplan2 p:first-child {
+    font-size: 8vh;
+  }
+}
+/* -------------------- Arkaplanlı ikinci bölüm --------------------*/
+.araButon,
+.araButon > * {
+  box-sizing: border-box;
+  height: 40px;
+  max-height: 40px;
+  padding: 5px auto;
+}
+.araButon img {
+  margin-top: 4px;
+}
+.kaptaniara2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* -------------------- Footer--------------------*/
+
+footer {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 140px;
+  min-height: 140px;
+  background-color: #23689b;
+  color: #a5b5bf;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 1fr;
+  align-items: center;
+  padding-inline: 50px;
+  font-size: 0.9rem;
+}
+footer p {
+  color: lightgray;
+}
+
+footer div:nth-of-type(2) {
+  justify-self: center;
+  align-self: stretch;
+  text-align: center;
+  font-size: 1rem;
+  display: grid;
+  grid-auto-rows: 20px;
+  align-content: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: yellow;
+}
+
+#footersag {
+  text-align: right;
+}
+@media (max-width: 768px) {
+  footer {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: initial;
+    grid-gap: 20px 10px;
+    padding-inline: 10px;
+    padding-block: 20px;
+    font-size: 0.8rem;
+  }
+  footer div:nth-of-type(2) {
+    justify-self: stretch;
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer div:nth-of-type(2) > a {
+    justify-self: start;
+    text-align: left;
+    font-size: 1rem;
+    margin-inline: 14px;
+  }
+  #footersag {
+    text-align: left;
+  }
+}
+
+/* ------------------Hamburger----------------- */
+.nav li a {
+  color: white;
+  text-decoration: none;
+}
+.nav li a:hover {
+  font-weight: bold;
+  color: yellow;
+}
+.nav li {
+  text-align: center;
+  list-style: none;
+  padding: 16px 0;
+}
+.nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 100px);
+  padding: 0;
+  margin: 0 auto;
+  transition: 0.3s ease;
+  background-color: #23689b;
+  z-index: 5;
+  position: fixed;
+  left: -3000px;
+  transition: all 0.4s ease;
+}
+.change {
+  left: 0px;
+}
+.close {
+  left: -3000px;
+}
+/* ------------------Hamburger----------------- */
+/* ----------------- iletisim Sayfasi --------- */
+#iletisim-cont {
+  box-sizing: border-box;
+  position: relative;
+  width: 80%;
+  height: calc(100vh - 240px);
+  min-height: calc(100vh - 240px);
+  margin: 0 auto;
+  padding-block: 20px;
+}
+.iletisim-items {
+  box-sizing: border-box;
+  float: left;
+  width: calc(50% - 20px);
+  min-width: calc(50% - 20px);
+  max-width: 50%;
+  height: calc(100vh - 280px);
+  min-height: calc(100vh - 280px);
+  max-height: 100%;
+  border-radius: 12px;
+  box-shadow: 2px 0px 2px 1px lightblue, -2px 0px 2px 1px lightblue;
+}
+
+#iletisim-soltaraf {
+  box-sizing: border-box;
+  height: calc(100vh - 280px);
+  min-height: calc(100vh - 280px);
+  background-color: #052d4b;
+  margin-right: 20px;
+  border-radius: 12px;
+}
+.iletisim-soltaraf_ikili {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 50%;
+  max-height: 50%;
+}
+#iletisim-soltaraf_ust {
+  background-color: #052d4b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 20px;
+  border-radius: 12px;
+}
+#iletisim-soltaraf_ust * {
+  color: white;
+}
+#iletisim-soltaraf_ust a {
+  text-decoration: none;
+}
+#iletisim-soltaraf_ust a:hover {
+  color: yellow;
+}
+#iletisim-soltaraf_ust a:hover i {
+  color: yellow;
+}
+.iletisim-soltaraf_ust_ucludivler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-block: 10px;
+}
+
+#iletisim-sagtaraf {
+  box-sizing: border-box;
+  background-image: url(Resimler/Main1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-left: 20px;
+}
+#iletisim-sagtaraf img {
+  height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .iletisim-items {
+    clear: left;
+    width: 100%;
+    min-width: 100%;
+  }
+  #iletisim-soltaraf {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  #iletisim-sagtaraf {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #iletisim-cont {
+    width: 100%;
+    height: auto;
+    font-size: 0.8rem;
+    padding-block: 0px;
+  }
+  .iletisim-items {
+    clear: left;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+  #iletisim-soltaraf {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: auto;
+    border-radius: 0px;
+  }
+  #iletisim-soltaraf_alt {
+    height: 50vh;
+  }
+  #iletisim-sagtaraf {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: auto;
+  }
+}
+/* -------------iletisim sayfası------------*/
